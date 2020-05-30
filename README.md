@@ -97,6 +97,7 @@ docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tensorflow1_obj
 It might take a while to start outputing. You can monitor the process from your browser at http://localhost:6006/
 ## Usefull commands
 This will launch an interactive terminal inside your docker container where you can run commands or install packages.
+
 **Note:** All changes will be reset after you exit the terminal with *exit*.
 ```Bash
 docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tensorflow1_object_detection /bin/bash
@@ -110,3 +111,6 @@ nvidia-smi
 **Why not tensorflow 2.0?**
 
 For object detection there are a lot more models listed in [tensorflow/models/research](https://github.com/tensorflow/models/tree/master/research/object_detection) which requires tensorflow 1.15.0 than in [tensorflow/models/official](https://github.com/tensorflow/models/tree/master/official) which is based on tensorflow 2.0.0. Of course this will probably change in the future.
+
+**I get a lot of deprecation warnings, why is that?**
+This template uses an older version of tensorflow as explained above, which results in a lot of deprecation warnings. It should however work nevertheless.

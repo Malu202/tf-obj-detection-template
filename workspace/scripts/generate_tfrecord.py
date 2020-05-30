@@ -39,7 +39,6 @@ FLAGS = flags.FLAGS
 # for multiple labels add more else if statements
 def class_text_to_int(row_label):
     
-    # comment upper if statement and uncomment these statements for multiple labelling
     if row_label == FLAGS.label0:
       return 1
     elif row_label == FLAGS.label1:

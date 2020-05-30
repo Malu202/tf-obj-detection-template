@@ -1,6 +1,6 @@
 #Modify this line:
-config_filename=INSERT_CONFIG_FILENAME.config
+config_filename=ssd_resnet50_fpn_640x640.config
 
 tensorboard --logdir output/ &
-python model_main.py --alsologtostderr --model_dir=output/ --pipeline_config_path=training/$config_filename
+python scripts/model_main.py --alsologtostderr --model_dir=output/ --pipeline_config_path=training/$config_filename
 

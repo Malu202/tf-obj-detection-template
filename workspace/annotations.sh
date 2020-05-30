@@ -1,5 +1,5 @@
 #Modify this line:
 labels = --label0=<LABEL> --label1=<LABEL>
 
-python generate_tfrecord.py $labels --csv_input=annotations/train_labels.csv  --output_path=annotations/train.record
-python generate_tfrecord.py $labels --csv_input=annotations/test_labels.csv  --output_path=annotations/test.record
+python scripts/generate_tfrecord.py $labels --csv_input=${PWD}/annotations/train_labels.csv --img_path=${PWD}/images/  --output_path=${PWD}/annotations/train.record
+python scripts/generate_tfrecord.py $labels --csv_input=${PWD}/annotations/test_labels.csv --img_path=${PWD}/images/ --output_path=${PWD}/annotations/test.record

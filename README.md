@@ -95,6 +95,28 @@ From workspace folder run:
 docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tf-obj-detection-template /bin/bash train.sh
 ```
 It might take a while to start outputing. You can monitor the process from your browser at http://localhost:6006/
+
+## Export a model
+In *export.sh* change the parameters for your data, eg:
+
+```bash
+input_shape_width=640
+input_shape_width=640
+config_filename=ssd_resnet50_fpn.config
+checkpoint_number=7441
+```
+and run
+
+```bash
+docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tf-obj-detection-template /bin/bash export.sh
+```
+
+### Export to Tensorflow.js
+Export with the above method and then convert this model by running:
+```bash
+docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tf-obj-detection-template /bin/bash export_to_tfjs.sh
+```
+
 ## Usefull commands
 ### Docker
 This will launch an interactive terminal inside your docker container where you can run commands or install packages.
@@ -116,20 +138,7 @@ This shows your gpu utilization. You can also run this inside your container (li
 ```Bash
 nvidia-smi
 ```
-## Export a model
-In *export.sh* change the parameters for your data, eg:
 
-```bash
-input_shape_width=640
-input_shape_width=640
-config_filename=ssd_resnet50_fpn.config
-checkpoint_number=7441
-```
-and run
-
-```bash
-docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tf-obj-detection-template /bin/bash export.sh
-```
 
 ## FAQ
 **Why not tensorflow 2.0?**

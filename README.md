@@ -116,6 +116,20 @@ This shows your gpu utilization. You can also run this inside your container (li
 ```Bash
 nvidia-smi
 ```
+## Export a model
+In *export.sh* change the parameters for your data, eg:
+
+```bash
+input_shape_width=640
+input_shape_width=640
+config_filename=ssd_resnet50_fpn.config
+checkpoint_number=7441
+```
+and run
+
+```bash
+docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tf-obj-detection-template /bin/bash export.sh
+```
 
 ## FAQ
 **Why not tensorflow 2.0?**

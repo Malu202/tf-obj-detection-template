@@ -7,7 +7,7 @@ For this to work you need the following software installed:
 
 * A Linux OS
 * [Docker](https://docs.docker.com/install/)
-* [Nvidia-Docker](https://github.com/NVIDIA/nvidia-docker)
+* [Nvidia-Docker](https://github.com/NVIDIA/nvidia-docker) (which requires a nvidia-gpu and nvidia-drivers)
 
 ## Training your model
 ### Build the Docker Image

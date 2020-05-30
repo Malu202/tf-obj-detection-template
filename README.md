@@ -96,12 +96,22 @@ docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tf-obj-detectio
 ```
 It might take a while to start outputing. You can monitor the process from your browser at http://localhost:6006/
 ## Usefull commands
+### Docker
 This will launch an interactive terminal inside your docker container where you can run commands or install packages.
 
 **Note:** All changes will be reset after you exit the terminal with *exit*.
 ```Bash
 docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tf-obj-detection-template /bin/bash
 ```
+To stop a container you can press ctrl+C. If that does not work, you first have to find its id by typing:
+```Bash
+docker ps -a
+```
+and then use that id to stop it:
+```Bash
+docker stop <id from above>
+```
+### Graphics Card
 This shows your gpu utilization. You can also run this inside your container (like mentioned before) so you can check if your gpu is detected by the container
 ```Bash
 nvidia-smi

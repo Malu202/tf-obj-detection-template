@@ -92,7 +92,7 @@ Next modify the filename in *train.sh* to the name of your config file (without 
 ## Start the training
 From workspace folder run:
 ```Shell
-docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tensorflow1_object_detection /bin/bash train.sh
+docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tf-obj-detection-template /bin/bash train.sh
 ```
 It might take a while to start outputing. You can monitor the process from your browser at http://localhost:6006/
 ## Usefull commands
@@ -100,7 +100,7 @@ This will launch an interactive terminal inside your docker container where you 
 
 **Note:** All changes will be reset after you exit the terminal with *exit*.
 ```Bash
-docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tensorflow1_object_detection /bin/bash
+docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tf-obj-detection-template /bin/bash
 ```
 This shows your gpu utilization. You can also run this inside your container (like mentioned before) so you can check if your gpu is detected by the container
 ```Bash

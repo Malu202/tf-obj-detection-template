@@ -95,7 +95,7 @@ From workspace folder run:
 docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tensorflow1_object_detection /bin/bash train.sh
 ```
 It might take a while to start outputing. You can monitor the process from your browser at http://localhost:6006/
-### Usefull commands
+## Usefull commands
 This will launch an interactive terminal inside your docker container where you can run commands or install packages.
 **Note:** All changes will be reset after you exit the terminal with *exit*.
 ```Bash

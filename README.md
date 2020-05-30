@@ -23,7 +23,7 @@ docker images
 ```
 
 ### Convert the annotations
-For this to work you need your csv file formatted like:
+For this to work you need your csv files formatted like:
 
 ```Csv
 filename,xmin,ymin,xmax,ymax,class
@@ -107,10 +107,11 @@ This shows your gpu utilization. You can also run this inside your container (li
 nvidia-smi
 ```
 
-### FAQ
+## FAQ
 **Why not tensorflow 2.0?**
 
 For object detection there are a lot more models listed in [tensorflow/models/research](https://github.com/tensorflow/models/tree/master/research/object_detection) which requires tensorflow 1.15.0 than in [tensorflow/models/official](https://github.com/tensorflow/models/tree/master/official) which is based on tensorflow 2.0.0. Of course this will probably change in the future.
 
 **I get a lot of deprecation warnings, why is that?**
+
 This template uses an older version of tensorflow as explained above, which results in a lot of deprecation warnings. It should however work nevertheless.

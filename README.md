@@ -45,7 +45,7 @@ Then modify the first line of annotations.sh to match your annotations, e.g.:
 ```Shell
  docker run --gpus all -v $PWD:/tmp -w /tmp --rm -it tf-obj-detection-template /bin/bash annotations.sh 
 ```
-If you get an error, saying it can not find the images, you can safely ignore that. Now you should have two .record files in your workspace/annotation folder.
+Make sure there are no errors before continuing. Now you should have two .record files in your workspace/annotation folder each a few MB in size.
 
 #### Create a label map
 Create a file in the annotations directory named **label_map.pbtxt** and set its content to:

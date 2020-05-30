@@ -97,4 +97,5 @@ docker run --gpus all -p 6006:6006 -v $PWD:/tmp -w /tmp --rm -it tensorflow1_obj
 It might take a while to start outputing. You can monitor the process from your browser at http://localhost:6006/
 ### FAQ
 **Why not tensorflow 2.0?**
+
 For object detection there are a low more models listed in [tensorflow/models/research](https://github.com/tensorflow/models/tree/master/research/object_detection) which requires tensorflow 1.15.0 than in [tensorflow/models/official](https://github.com/tensorflow/models/tree/master/official) which is based on tensorflow 2.0.0. Of course this will probably change in the future.

@@ -63,7 +63,7 @@ item {
 ```
 Replacing of course "cat" and "dog" withy your own labels. Again you can add more labels if you followed the steps while creating the .tfrecords files.
 ### Setup training
-Download a sample config for your chosen model from [here](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) and a pre-trained model from [here](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md#coco-trained-models-coco-models).
+Download a sample config for your chosen model from [here](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) and a pre-trained model from [here](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md).
 Put the config file in to **workspace/training** folder and extract the content of the pre trained model download into **workspace/pre-trained-model**.
 Modify the following lines of the config file:
 ```js

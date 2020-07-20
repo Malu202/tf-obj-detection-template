@@ -9,4 +9,5 @@ python scripts/export_inference_graph.py \
 	--input_shape 1,$input_shape_width,$input_shape_height,3 \
 	--pipeline_config_path training/$config_filename \
 	--trained_checkpoint_prefix output/model.ckpt-$checkpoint_number \
- 	--output_directory export/
+ 	--output_directory export/ \
+ 	--add_postprocessing_op=true
